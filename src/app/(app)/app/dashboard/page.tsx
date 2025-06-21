@@ -4,10 +4,11 @@ import SearchForm from "@/components/search-form";
 import PetList from "@/components/pet-list";
 import PetDetails from "@/components/pet-details";
 import ContentBlock from "@/components/content-block";
+import PetButton from "@/components/pet-button";
 
 export default async function Page() {
-    
-    
+
+
     return (
         <main>
             <div className="flex items-center justify-between text-white py-8">
@@ -20,9 +21,13 @@ export default async function Page() {
                     <SearchForm />
                 </div>
 
-                <div className="md:row-start-2 md:row-span-full md:col-start-1 md:col-span-1">
+                <div className="relative md:row-start-2 md:row-span-full md:col-start-1 md:col-span-1">
                     <ContentBlock>
                         <PetList />
+
+                        <div className="absolute bottom-4 right-4">
+                            <PetButton actionType="add" />
+                        </div>
                     </ContentBlock>
                 </div>
 
